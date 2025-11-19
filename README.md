@@ -14,6 +14,7 @@ $ git-mover.py [-h] [--destinationToken [DESTINATIONTOKEN]]
                     [--sourceRoot [SOURCEROOT]]
                     [--destinationRoot [DESTINATIONROOT]] [--milestones]
                     [--labels] [--issues]
+                    [--assignee [DESTINATIONASSIGNEE]]
                     user_name token source_repo destination_repo
 ```
 
@@ -38,11 +39,12 @@ For authentication, GitMover uses a personal access token, which can be generate
   `--destinationToken [DESTINATIONTOKEN], -dt [DESTINATIONTOKEN]`: Your personal access token for the destination account, if you are migrating between different GitHub installations.
   
   `--destinationUserName [DESTINATIONUSERNAME], -dun [DESTINATIONUSERNAME]`: Username (email address) for destination account, if you are migrating between different GitHub installations.
-  
+
+  `--assignee, -a`: Username in target repo or enterprise to assign migrated issues to.
+
   `--milestones, -m`: Toggle on Milestone migration.
   
   `--labels, -l`: Toggle on Label migration.
   
   `--issues, -i`: Toggle on Issue migration.
 
-  `--assignee, -a`: Username in target repo or enterprise to assign migrated issues to.
