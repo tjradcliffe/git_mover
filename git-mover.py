@@ -167,8 +167,7 @@ def create_issues(issues, destination_url, destination, milestones, labels, mile
     url = destination_url+"repos/"+destination+"/issues"
     for issue in issues:
         #create a new issue object containing only the data necessary for the creation of a new issue
-        assignee = None
-        if (issue["assignee"] and sameInstall):
+        if (assignee is None and issue["assignee"] and sameInstall):
             assignee = issue["assignee"]["login"]
         issue_prime = {"title" : issue["title"], "body" : issue["body"], "assignee": assignee, "state" : issue["state"]}
         #if milestones were migrated and the issue to be posted contains milestones
