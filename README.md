@@ -44,3 +44,5 @@ For authentication, GitMover uses a personal access token, which can be generate
   `--labels, -l`: Toggle on Label migration.
   
   `--issues, -i`: Toggle on Issue migration.
+
+  `--assignee, -a`: Username in target repo or enterprise to assign migrated issues to.
